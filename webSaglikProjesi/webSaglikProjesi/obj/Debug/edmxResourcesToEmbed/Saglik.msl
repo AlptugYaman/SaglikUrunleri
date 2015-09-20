@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SaglikUrunleriModelStoreContainer" CdmEntityContainer="SaglikUrunleriEntities">
+    <EntitySetMapping Name="AltKategoriler">
+      <EntityTypeMapping TypeName="SaglikUrunleriModel.AltKategoriler">
+        <MappingFragment StoreEntitySet="AltKategoriler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="altkategoriad" ColumnName="altkategoriad" />
+          <ScalarProperty Name="kategorino" ColumnName="kategorino" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="silindi" ColumnName="silindi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategoriler">
+      <EntityTypeMapping TypeName="SaglikUrunleriModel.Kategoriler">
+        <MappingFragment StoreEntitySet="Kategoriler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kategoriad" ColumnName="kategoriad" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="silindi" ColumnName="silindi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Urunler">
+      <EntityTypeMapping TypeName="SaglikUrunleriModel.Urunler">
+        <MappingFragment StoreEntitySet="Urunler">
+          <ScalarProperty Name="urunid" ColumnName="urunid" />
+          <ScalarProperty Name="urunkodu" ColumnName="urunkodu" />
+          <ScalarProperty Name="urunad" ColumnName="urunad" />
+          <ScalarProperty Name="urunkategorino" ColumnName="urunkategorino" />
+          <ScalarProperty Name="urunaltkategorino" ColumnName="urunaltkategorino" />
+          <ScalarProperty Name="miktar" ColumnName="miktar" />
+          <ScalarProperty Name="urunfiyat" ColumnName="urunfiyat" />
+          <ScalarProperty Name="urunbilgisi" ColumnName="urunbilgisi" />
+          <ScalarProperty Name="resimyolu1" ColumnName="resimyolu1" />
+          <ScalarProperty Name="resimyolu2" ColumnName="resimyolu2" />
+          <ScalarProperty Name="silindi" ColumnName="silindi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

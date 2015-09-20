@@ -1,0 +1,14 @@
+C:\Users\HISection-2\Documents\HIO_Net\webSaglikProjesi\webSaglikProjesi\bin\webSaglikProjesi.dll
+C:\Users\HISection-2\Documents\HIO_Net\webSaglikProjesi\webSaglikProjesi\bin\webSaglikProjesi.pdb
+C:\Users\HISection-2\Documents\HIO_Net\webSaglikProjesi\webSaglikProjesi\obj\Debug\webSaglikProjesi.csprojResolveAssemblyReference.cache
+C:\Users\HISection-2\Documents\HIO_Net\webSaglikProjesi\webSaglikProjesi\obj\Debug\webSaglikProjesi.dll
+C:\Users\HISection-2\Documents\HIO_Net\webSaglikProjesi\webSaglikProjesi\obj\Debug\webSaglikProjesi.pdb
+C:\Users\HISection-2\Documents\HIO_Net\webSaglikProjesi\webSaglikProjesi\bin\EntityFramework.dll
+C:\Users\HISection-2\Documents\HIO_Net\webSaglikProjesi\webSaglikProjesi\bin\EntityFramework.xml
+C:\Users\ASUS\Desktop\SINAV\webSaglikProjesi\webSaglikProjesi\bin\webSaglikProjesi.dll
+C:\Users\ASUS\Desktop\SINAV\webSaglikProjesi\webSaglikProjesi\bin\webSaglikProjesi.pdb
+C:\Users\ASUS\Desktop\SINAV\webSaglikProjesi\webSaglikProjesi\bin\EntityFramework.dll
+C:\Users\ASUS\Desktop\SINAV\webSaglikProjesi\webSaglikProjesi\bin\EntityFramework.xml
+C:\Users\ASUS\Desktop\SINAV\webSaglikProjesi\webSaglikProjesi\obj\Debug\webSaglikProjesi.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\SINAV\webSaglikProjesi\webSaglikProjesi\obj\Debug\webSaglikProjesi.dll
+C:\Users\ASUS\Desktop\SINAV\webSaglikProjesi\webSaglikProjesi\obj\Debug\webSaglikProjesi.pdb

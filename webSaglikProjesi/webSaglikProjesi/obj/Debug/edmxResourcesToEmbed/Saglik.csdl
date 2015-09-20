@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SaglikUrunleriModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SaglikUrunleriEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="AltKategoriler" EntityType="SaglikUrunleriModel.AltKategoriler" />
+    <EntitySet Name="Kategoriler" EntityType="SaglikUrunleriModel.Kategoriler" />
+    <EntitySet Name="Urunler" EntityType="SaglikUrunleriModel.Urunler" />
+    <AssociationSet Name="FK_AltKategoriler_Kategoriler" Association="SaglikUrunleriModel.FK_AltKategoriler_Kategoriler">
+      <End Role="Kategoriler" EntitySet="Kategoriler" />
+      <End Role="AltKategoriler" EntitySet="AltKategoriler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urunler_AltKategoriler" Association="SaglikUrunleriModel.FK_Urunler_AltKategoriler">
+      <End Role="AltKategoriler" EntitySet="AltKategoriler" />
+      <End Role="Urunler" EntitySet="Urunler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urunler_Kategoriler" Association="SaglikUrunleriModel.FK_Urunler_Kategoriler">
+      <End Role="Kategoriler" EntitySet="Kategoriler" />
+      <End Role="Urunler" EntitySet="Urunler" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AltKategoriler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="altkategoriad" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="kategorino" Type="Int32" />
+    <Property Name="aciklama" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="silindi" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Kategoriler" Relationship="SaglikUrunleriModel.FK_AltKategoriler_Kategoriler" FromRole="AltKategoriler" ToRole="Kategoriler" />
+    <NavigationProperty Name="Urunler" Relationship="SaglikUrunleriModel.FK_Urunler_AltKategoriler" FromRole="AltKategoriler" ToRole="Urunler" />
+  </EntityType>
+  <EntityType Name="Kategoriler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="kategoriad" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="aciklama" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="silindi" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AltKategoriler" Relationship="SaglikUrunleriModel.FK_AltKategoriler_Kategoriler" FromRole="Kategoriler" ToRole="AltKategoriler" />
+    <NavigationProperty Name="Urunler" Relationship="SaglikUrunleriModel.FK_Urunler_Kategoriler" FromRole="Kategoriler" ToRole="Urunler" />
+  </EntityType>
+  <EntityType Name="Urunler">
+    <Key>
+      <PropertyRef Name="urunid" />
+    </Key>
+    <Property Name="urunid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="urunkodu" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="urunad" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="urunkategorino" Type="Int32" Nullable="false" />
+    <Property Name="urunaltkategorino" Type="Int32" Nullable="false" />
+    <Property Name="miktar" Type="Int32" Nullable="false" />
+    <Property Name="urunfiyat" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="urunbilgisi" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="resimyolu1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="resimyolu2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="silindi" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AltKategoriler" Relationship="SaglikUrunleriModel.FK_Urunler_AltKategoriler" FromRole="Urunler" ToRole="AltKategoriler" />
+    <NavigationProperty Name="Kategoriler" Relationship="SaglikUrunleriModel.FK_Urunler_Kategoriler" FromRole="Urunler" ToRole="Kategoriler" />
+  </EntityType>
+  <Association Name="FK_AltKategoriler_Kategoriler">
+    <End Role="Kategoriler" Type="SaglikUrunleriModel.Kategoriler" Multiplicity="0..1" />
+    <End Role="AltKategoriler" Type="SaglikUrunleriModel.AltKategoriler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AltKategoriler">
+        <PropertyRef Name="kategorino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urunler_AltKategoriler">
+    <End Role="AltKategoriler" Type="SaglikUrunleriModel.AltKategoriler" Multiplicity="1" />
+    <End Role="Urunler" Type="SaglikUrunleriModel.Urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AltKategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Urunler">
+        <PropertyRef Name="urunaltkategorino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urunler_Kategoriler">
+    <End Role="Kategoriler" Type="SaglikUrunleriModel.Kategoriler" Multiplicity="1" />
+    <End Role="Urunler" Type="SaglikUrunleriModel.Urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Urunler">
+        <PropertyRef Name="urunkategorino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
